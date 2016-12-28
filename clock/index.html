@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+	    <meta charset="utf-8">
+		<title>css3模拟钟表效果</title>
+		<style>
+			body{
+				background: #ddd;
+			}
+			#clock{
+				width: 146px;
+				height: 146px;
+				border: 2px solid #fff;
+				margin: 200px auto;
+				position: relative;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-ms-border-radius: 50%;
+				-o-border-radius: 50%;
+				border-radius: 50%;
+			}
+			#clock:before,#clock:after{
+				content: '';
+				position: absolute;
+				width: 65px;
+				height: 2px;
+				top: 73px;
+				left: 73px;
+				background: #fff;
+				-webkit-transform-origin: left;
+				-moz-transform-origin: left;
+				-ms-transform-origin: left;
+				-o-transform-origin: left;
+				transform-origin: left;
+			}
+			#clock:before{
+				-webkit-animation: round 60s linear infinite;
+				-moz-animation: round 60s linear infinite;
+				-o-animation: round 60s linear infinite;
+				animation: round 60s linear infinite;
+			}
+			#clock:after{
+				width: 55px;
+				-webkit-animation: round 3600s linear infinite;
+				-moz-animation: round 3600s linear infinite;
+				-o-animation: round 3600s linear infinite;
+				animation: round 3600s linear infinite;
+			}
+			@keyframes round{
+				0%{
+					-webkit-transform: rotate(0deg);
+					-ms-transform: rotate(0deg);
+					-o-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}100%{
+					-webkit-transform: rotate(360deg);
+					-ms-transform: rotate(360deg);
+					-o-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="clock"></div>
+	</body>
+</html>
