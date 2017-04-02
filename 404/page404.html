@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>page404</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#page404{
+				overflow: hidden;
+			}
+			p{
+				width: 10%;
+				height: 100%;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script language="javascript">
+		function page404(){
+			var rarr = [0,0,0,0,255,255,165,243,211,153];
+			var garr = [0,0,255,255,0,0,42,243,211,153];
+			var barr = [0,255,0,255,0,255,42,70,211,153];
+			document.write('<div id="page404">');
+			for (var i = 0; i < rarr.length; i++) {
+				document.write('<p style="background:rgb('+rarr[i]+','+garr[i]+','+barr[i]+')"></p>');
+			}
+			document.write('</div>');
+			var h = document.body.scrollHeight;
+			document.getElementById('page404').style.height = h+'px';
+		}
+		page404();
+	</script>
+</html>
